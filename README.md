@@ -7,6 +7,6 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
-[module_name](module_name/) | 13.0.1.0.0 | little description
+[invoice_inside_account_menu](invoice_inside_account_menu/) | 13.0.1.0.0 | Invoincing menu into Accounting
 
 [//]: # (end addons)
