@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2020 Valentin Vinagre <valentin.vinagre@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <!-- Shared views -->
+    <record id="invoice_kanban_all" model="ir.ui.view">
+        <field name="name">invoice.kanban.all</field>
+        <field name="model">account.invoice</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="account.invoice_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="create">false</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Customer -->
+    <record id="invoice_tree_all" model="ir.ui.view">
+        <field name="name">account.invoice.tree.all</field>
+        <field name="model">account.invoice</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="account.invoice_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="create">false</attribute>
+            </xpath>
+            <field name="number" position="after">
+                <field name="type"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="invoice_form_all" model="ir.ui.view">
+        <field name="name">account.invoice.form.all</field>
+        <field name="model">account.invoice</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="attributes">
+                <attribute name="create">false</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_invoice_filter_customer_all" model="ir.ui.view">
+        <field name="name">view.account.invoice.filter.customer.all</field>
+        <field name="model">account.invoice</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='myinvoices']" position="after">
+                <filter domain="[('type','=','out_invoice')]" name="Invoices" string="Invoices"/>
+                <filter domain="[('type','=','out_refund')]" name="Refunds" string="Refunds"/>
+            </xpath>
+            <xpath expr="//filter[@name='status']" position="after">
+                <filter name="type" string="Type" context="{'group_by':'type'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_invoice_out_all" model="ir.actions.act_window">
+        <field name="name">All Invoices</field>
+        <field name="res_model">account.invoice</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,kanban,form,pivot,graph,activity</field>
+        <field eval="False" name="view_id"/>
+        <field name="domain">[('type','in',['out_refund', 'out_invoice'])]</field>
+        <field name="search_view_id" ref="view_account_invoice_filter_customer_all"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            This view is only for view the invoices.
+          </p>
+        </field>
+    </record>
+
+    <record id="action_invoice_out_all_tree" model="ir.actions.act_window.view">
+        <field eval="1" name="sequence"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="invoice_tree_all"/>
+        <field name="act_window_id" ref="action_invoice_out_all"/>
+    </record>
+
+    <record id="action_invoice_out_all_form" model="ir.actions.act_window.view">
+        <field eval="2" name="sequence"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="invoice_form_all"/>
+        <field name="act_window_id" ref="action_invoice_out_all"/>
+    </record>
+
+    <record id="action_invoice_out_all_kanban" model="ir.actions.act_window.view">
+        <field eval="3" name="sequence"/>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="invoice_kanban_all"/>
+        <field name="act_window_id" ref="action_invoice_out_all"/>
+    </record>
+
+    <menuitem action="action_invoice_out_all"
+        id="menu_action_invoice_out_all"
+        parent="account.menu_finance_receivables"
+        sequence="1"/>
+
+    <!-- Supplier -->
+    <record id="invoice_supplier_tree_all" model="ir.ui.view">
+        <field name="name">invoice.supplier.tree.all</field>
+        <field name="model">account.invoice</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="account.invoice_supplier_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="create">false</attribute>
+            </xpath>
+            <field name="number" position="after">
+                <field name="type"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="invoice_supplier_form_all" model="ir.ui.view">
+        <field name="name">invoice.supplier.form.all</field>
+        <field name="model">account.invoice</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="attributes">
+                <attribute name="create">false</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_invoice_filter_supplier_all" model="ir.ui.view">
+        <field name="name">view.account.invoice.filter.customer.all</field>
+        <field name="model">account.invoice</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='myinvoices']" position="after">
+                <filter domain="[('type','=','in_invoice')]" name="Bills" string="Bills"/>
+                <filter domain="[('type','=','in_refund')]" name="Refunds" string="Refunds"/>
+            </xpath>
+            <xpath expr="//filter[@name='status']" position="after">
+                <filter name="type" string="Type" context="{'group_by':'type'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_invoice_in_all" model="ir.actions.act_window">
+        <field name="name">All Bills</field>
+        <field name="res_model">account.invoice</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,kanban,form,pivot,graph,activity</field>
+        <field eval="False" name="view_id"/>
+        <field name="domain">[('type','in',['in_refund', 'in_invoice'])]</field>
+        <field name="search_view_id" ref="view_account_invoice_filter_supplier_all"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            This view is only for view the bills.
+          </p>
+        </field>
+    </record>
+
+    <record id="action_invoice_in_all_tree" model="ir.actions.act_window.view">
+        <field eval="1" name="sequence"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="invoice_supplier_tree_all"/>
+        <field name="act_window_id" ref="action_invoice_in_all"/>
+    </record>
+
+    <record id="action_invoice_in_all_form" model="ir.actions.act_window.view">
+        <field eval="2" name="sequence"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="invoice_supplier_form_all"/>
+        <field name="act_window_id" ref="action_invoice_in_all"/>
+    </record>
+
+    <record id="action_invoice_out_all_kanban" model="ir.actions.act_window.view">
+        <field eval="3" name="sequence"/>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="invoice_kanban_all"/>
+        <field name="act_window_id" ref="action_invoice_in_all"/>
+    </record>
+
+    <menuitem action="action_invoice_in_all"
+        id="menu_action_invoice_in_all"
+        parent="account.menu_finance_payables"
+        sequence="5"/>
+</odoo>
