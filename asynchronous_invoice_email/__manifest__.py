@@ -4,7 +4,7 @@
 {
     "name": "Asynchronous Invoice Email",
     "summary": "Send emails with invoices asynchronously",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "category": "Invoice",
     "website": "https://www.sygel.es",
     "author": "Sygel",
