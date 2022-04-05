@@ -1,5 +1,5 @@
 # Copyright 2018 Xavier Piernas <xavier.piernas@qubiq.es>
-# Copyright 2020 Valentin Vinagre <valentin.vinagre@sygel.es>
+# Copyright 2020-2022 Valentin Vinagre <valentin.vinagre@sygel.es>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 from odoo import models
@@ -13,8 +13,8 @@ class AccountMove(models.Model):
         if self.payment_mode_id:
             if self.payment_mode_id.account_source == 'company':
                 if self.payment_mode_id.invoice_account and\
-                        self.invoice_partner_bank_id:
-                    bank_accounts.append(self.invoice_partner_bank_id)
+                        self.partner_bank_id:
+                    bank_accounts.append(self.partner_bank_id)
                 elif self.payment_mode_id.res_partner_bank_ids:
                     for account in self.payment_mode_id.res_partner_bank_ids:
                         bank_accounts.append(account)
