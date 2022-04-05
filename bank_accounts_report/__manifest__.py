@@ -1,11 +1,11 @@
 # Copyright 2018 Xavier Piernas <xavier.piernas@qubiq.es>
-# Copyright 2020 Valentin Vinagre <valentin.vinagre@sygel.es>
+# Copyright 2020-2022 Valentin Vinagre <valentin.vinagre@sygel.es>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 {
     "name": "Bank Accounts Report",
     "summary": "Choose which bank accounts will be displayed on invoice and sale order reports",
-    "version": "14.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Account",
     "website": "https://www.qubiq.es",
     "author": "QubiQ, Odoo Community Association (OCA)",
