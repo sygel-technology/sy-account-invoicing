@@ -4,7 +4,7 @@
 {
     "name": "Followers in mass invoice mailing",
     "summary": "Include followers in the mass mailing of invoices.",
-    "version": "14.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Custom",
     "website": "https://www.sygel.es",
     "author": "Sygel, Odoo Community Association (OCA)",
