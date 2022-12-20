@@ -52,3 +52,20 @@ class AccountPaymentMode(models.Model):
     show_part_bank_account_chars = fields.Integer(
         string="# of digits"
     )
+    show_payment_message_sale = fields.Boolean(
+        default=False,
+        string='Show Payment Message in Sales'
+    )
+    show_payment_message_invoice = fields.Boolean(
+        default=False,
+        string='Show Payment Message on Invoices'
+    )
+    payment_message = fields.Char(
+        string='Payment Message',
+        help="This text will appear in the sales reports and Invoice reports "
+        "that are so configured followed by the name of the Invoice/Sale. "
+        "e.g. if the message is 'Indicate in the transfer the concept:' in "
+        "the invoice and/or sales reports it will appear: "
+        "'Indicate in the transfer the concept:'+ Invoice/Sale name.",
+        translate=True
+    )

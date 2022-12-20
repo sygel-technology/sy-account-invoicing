@@ -1,19 +1,24 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* bank_accounts_report
+# 	* bank_accounts_report
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0+e\n"
+"Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-11 15:45+0000\n"
-"PO-Revision-Date: 2019-07-11 15:45+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2022-12-20 10:24+0000\n"
+"PO-Revision-Date: 2022-12-20 10:24+0000\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: bank_accounts_report
+#: model:ir.model.fields,field_description:bank_accounts_report.field_account_payment_mode__show_part_bank_account_chars
+msgid "# of digits"
+msgstr "# de dígitos"
 
 #. module: bank_accounts_report
 #: model_terms:ir.ui.view,arch_db:bank_accounts_report.report_invoice_document
@@ -24,34 +29,37 @@ msgstr "<strong>Cuenta bancaria:</strong>"
 #. module: bank_accounts_report
 #: model_terms:ir.ui.view,arch_db:bank_accounts_report.report_invoice_document
 #: model_terms:ir.ui.view,arch_db:bank_accounts_report.report_saleorder_document
-msgid "<strong>Bank Accounts:</strong>\n"
+msgid ""
+"<strong>Bank Accounts:</strong>\n"
 "                    <br/>"
-msgstr "<strong>Cuentas bancarias:</strong>\n"
+msgstr ""
+"<strong>Cuentas bancarias:</strong>\n"
 "                    <br/>"
 
 #. module: bank_accounts_report
-#: code:addons/bank_accounts_report/models/account_payment_mode.py:15
+#: code:addons/bank_accounts_report/models/account_payment_mode.py:0
 #: model:ir.model.fields,field_description:bank_accounts_report.field_account_payment_mode__account_source
 #, python-format
 msgid "Account Source"
 msgstr "Origen cuenta"
 
 #. module: bank_accounts_report
-#: code:addons/bank_accounts_report/models/account_payment_mode.py:39
+#: code:addons/bank_accounts_report/models/account_payment_mode.py:0
 #: model:ir.model.fields,field_description:bank_accounts_report.field_account_payment_mode__apply_sale_order
 #, python-format
 msgid "Apply to Sale Orders"
 msgstr "Aplicar a pedidos de venta"
 
 #. module: bank_accounts_report
-#: selection:account.payment.mode,partner_account_source:0
-#: code:addons/bank_accounts_report/models/account_payment_mode.py:33
+#: code:addons/bank_accounts_report/models/account_payment_mode.py:0
+#: model:ir.model.fields.selection,name:bank_accounts_report.selection__account_payment_mode__partner_account_source__bank
 #, python-format
 msgid "Bank Account"
 msgstr "Cuenta bancaria"
 
 #. module: bank_accounts_report
-#: code:addons/bank_accounts_report/models/account_payment_mode.py:29
+#: code:addons/bank_accounts_report/models/account_payment_mode.py:0
+#: model:ir.model.fields,field_description:bank_accounts_report.field_account_payment_mode__res_partner_bank_ids
 #, python-format
 msgid "Bank Accounts"
 msgstr "Cuentas bancarias"
@@ -62,49 +70,69 @@ msgid "Bank Accounts on Reports"
 msgstr "Cuentas bancarias en informes"
 
 #. module: bank_accounts_report
-#: selection:account.payment.mode,account_source:0
-#: code:addons/bank_accounts_report/models/account_payment_mode.py:11
+#: code:addons/bank_accounts_report/models/account_payment_mode.py:0
+#: model:ir.model.fields.selection,name:bank_accounts_report.selection__account_payment_mode__account_source__company
 #, python-format
 msgid "Company"
 msgstr "Compañía"
 
 #. module: bank_accounts_report
-#: model:ir.model.fields,field_description:bank_accounts_report.field_account_payment_mode__res_partner_bank_ids
-msgid "Cuentas bancarias"
-msgstr "Cuentas bancarias"
+#: model:ir.model.fields.selection,name:bank_accounts_report.selection__account_payment_mode__show_part_bank_account__first
+msgid "First n chars"
+msgstr "Primeros n caracteres"
 
 #. module: bank_accounts_report
-#: model:ir.model,name:bank_accounts_report.model_account_invoice
-msgid "Invoice"
-msgstr "Factura"
+#: model:ir.model.fields.selection,name:bank_accounts_report.selection__account_payment_mode__show_part_bank_account__full
+msgid "Full"
+msgstr ""
 
 #. module: bank_accounts_report
-#: selection:account.payment.mode,partner_account_source:0
-#: code:addons/bank_accounts_report/models/account_payment_mode.py:32
+#: model:ir.model.fields,field_description:bank_accounts_report.field_account_payment_mode__show_part_bank_account
+msgid "How show bank account"
+msgstr "Cómo mostrar cuenta bancaria"
+
+#. module: bank_accounts_report
+#: model:ir.model,name:bank_accounts_report.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: bank_accounts_report
+#: model:ir.model.fields.selection,name:bank_accounts_report.selection__account_payment_mode__show_part_bank_account__last
+msgid "Last n chars"
+msgstr "Últimos n caracteres"
+
+#. module: bank_accounts_report
+#: code:addons/bank_accounts_report/models/account_payment_mode.py:0
+#: model:ir.model.fields.selection,name:bank_accounts_report.selection__account_payment_mode__partner_account_source__mandate
 #, python-format
 msgid "Mandate"
 msgstr "Mandato SEPA"
 
 #. module: bank_accounts_report
-#: selection:account.payment.mode,account_source:0
-#: code:addons/bank_accounts_report/models/account_payment_mode.py:13
+#: code:addons/bank_accounts_report/models/account_payment_mode.py:0
+#: model:ir.model.fields.selection,name:bank_accounts_report.selection__account_payment_mode__account_source__no
 #, python-format
 msgid "No"
 msgstr "No"
 
 #. module: bank_accounts_report
-#: selection:account.payment.mode,account_source:0
-#: code:addons/bank_accounts_report/models/account_payment_mode.py:12
+#: code:addons/bank_accounts_report/models/account_payment_mode.py:0
+#: model:ir.model.fields.selection,name:bank_accounts_report.selection__account_payment_mode__account_source__partner
 #, python-format
 msgid "Partner"
 msgstr "Cliente"
 
 #. module: bank_accounts_report
-#: code:addons/bank_accounts_report/models/account_payment_mode.py:35
+#: code:addons/bank_accounts_report/models/account_payment_mode.py:0
 #: model:ir.model.fields,field_description:bank_accounts_report.field_account_payment_mode__partner_account_source
 #, python-format
 msgid "Partner Account Source"
 msgstr "Origen Cuenta del cliente."
+
+#. module: bank_accounts_report
+#: model:ir.model.fields,field_description:bank_accounts_report.field_account_payment_mode__payment_message
+msgid "Payment Message"
+msgstr "Mensaje de Cobro"
 
 #. module: bank_accounts_report
 #: model:ir.model,name:bank_accounts_report.model_account_payment_mode
@@ -113,34 +141,62 @@ msgstr "Modos de pago"
 
 #. module: bank_accounts_report
 #: model:ir.model,name:bank_accounts_report.model_sale_order
-msgid "Sale Order"
+msgid "Sales Order"
 msgstr "Pedido de venta"
 
 #. module: bank_accounts_report
-#: code:addons/bank_accounts_report/models/account_payment_mode.py:18
+#: model:ir.model.fields,field_description:bank_accounts_report.field_account_payment_mode__show_payment_message_invoice
+msgid "Show Payment Message on Invoices"
+msgstr "Mostrar Mensaje de Cobro en Facturas"
+
+#. module: bank_accounts_report
+#: model:ir.model.fields,field_description:bank_accounts_report.field_account_payment_mode__show_payment_message_sale
+msgid "Show Payment Message in Sales"
+msgstr "Mostrar Mensaje de Cobro en Ventas"
+
+#. module: bank_accounts_report
+#: model:ir.model.fields,help:bank_accounts_report.field_account_payment_mode__show_part_bank_account
+msgid "Show in invoices partial or full bank account number"
+msgstr ""
+"Mostrar en las facturas el número parcial o total de la cuenta bancaria"
+
+#. module: bank_accounts_report
+#: code:addons/bank_accounts_report/models/account_payment_mode.py:0
 #: model:ir.model.fields,field_description:bank_accounts_report.field_account_payment_mode__report_text
 #, python-format
 msgid "Text on report"
 msgstr "Texto en el informe"
 
 #. module: bank_accounts_report
-#: code:addons/bank_accounts_report/models/account_payment_mode.py:19
+#: model:ir.model.fields,help:bank_accounts_report.field_account_payment_mode__payment_message
+msgid ""
+"This text will appear in the sales reports and Invoice reports that are so "
+"configured followed by the name of the Invoice/Sale. e.g. if the message is "
+"'Indicate in the transfer the concept:' in the invoice and/or sales reports "
+"it will appear: 'Indicate in the transfer the concept:'+ Invoice/Sale name."
+msgstr ""
+"Este texto aparecera en los informes de ventas e informes de Facturas "
+"que así esten configurados seguido del nombre de la Factura/Venta. e.g si el mensaje es "
+"'Indicar en la transferencia el concepto:' en los informes de facturas y/o ventas "
+"aparecerá: 'Indicar en la transferencia el concepto:'+ nombre Factura/Venta."
+
+#. module: bank_accounts_report
+#: code:addons/bank_accounts_report/models/account_payment_mode.py:0
 #: model:ir.model.fields,help:bank_accounts_report.field_account_payment_mode__report_text
 #, python-format
 msgid "This text will be displayed on the report with the accounts"
 msgstr "Este texto se mostrará en el informe con las cuentas."
 
 #. module: bank_accounts_report
-#: code:addons/bank_accounts_report/models/account_payment_mode.py:24
+#: code:addons/bank_accounts_report/models/account_payment_mode.py:0
 #: model:ir.model.fields,field_description:bank_accounts_report.field_account_payment_mode__invoice_account
 #, python-format
 msgid "Use Invoice Account"
 msgstr "Usar cuenta de factura"
 
 #. module: bank_accounts_report
-#: code:addons/bank_accounts_report/models/account_payment_mode.py:25
+#: code:addons/bank_accounts_report/models/account_payment_mode.py:0
 #: model:ir.model.fields,help:bank_accounts_report.field_account_payment_mode__invoice_account
 #, python-format
 msgid "Use the bank account set on the invoice"
 msgstr "Usar la cuenta bancaria especificada en la factura"
-

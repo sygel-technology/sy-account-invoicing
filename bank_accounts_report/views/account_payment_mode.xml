@@ -18,6 +18,9 @@
                     <field name="apply_sale_order" attrs="{'invisible': [('account_source', '=', 'no')]}"/>
                     <field name="show_part_bank_account" attrs="{'invisible': [('account_source', '=', 'no')]}"/>
                     <field name="show_part_bank_account_chars" attrs="{'invisible': ['|',('show_part_bank_account', '=', 'full'), ('account_source', '=', 'no')]}"/>
+                    <field name="show_payment_message_sale" attrs="{'invisible': [('account_source', '=', 'no')]}"/>
+                    <field name="show_payment_message_invoice" attrs="{'invisible': [('account_source', '=', 'no')]}"/>
+                    <field name="payment_message" attrs="{'invisible': [('account_source', '=', 'no')], 'required': ['|', ('show_payment_message_sale', '=', True), ('show_payment_message_invoice', '=', True)]}"/>
         		</group>
         	</xpath>
         </field>

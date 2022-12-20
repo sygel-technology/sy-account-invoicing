@@ -6,7 +6,7 @@
 Bank Accounts Report
 ====================
 
-Choose which bank accounts will be displayed on invoice and sale order reports.
+Choose which bank accounts will be displayed and payment message on invoice and sale order reports.
 
 
 Installation
@@ -19,6 +19,9 @@ Configuration
 =============
 
 Go to Accounting -> Configuration -> Payment Modes and configure the "Bank Account on Reports" section for every payment mode. "Account Source" is "No" by default, which means no account will be displayed on reports. By choosing "Company" and "Use Invoice Account" it will display the account set on the invoice. Unchecking "Use Invoice Account", you can manually set as many accounts from your company as you want to appear on the invoice. By choosing  "Partner", it will take the partner account from the mandate on the invoice if it is required. Additionally, choose "Mandate" or "Bank Account", so if the mandate is not required, it will look for the account on the last active mandate for the partner or on its last bank account. Choose "Apply to Sale Orders" if you want it to work for sale orders too.
+
+If you want a payment message to be displayed on Sales Orders and/or Invoices. Check the 'Show Payment Message in Invoices' and/or 'Show Payment Message in Sales' checkbox and complete the 'Payment Message' field.
+Invoices or Sales Orders will show 'Payment Message' + Invoice/Sales name.
 
 
 Usage
