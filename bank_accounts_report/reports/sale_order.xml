@@ -31,6 +31,9 @@
                     </t>
                     <br/>
     			</t>
+                <t t-if="doc.payment_mode_id.show_payment_message_sale">
+                    <span t-field="doc.payment_mode_id.payment_message"/> <strong><span t-field="doc.name"/></strong>
+                </t>
     		</t>
     	</xpath>
     </template>
