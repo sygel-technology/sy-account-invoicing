@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Copyright 2019 Jesus Ramoneda <jesus.ramoneda@qubiq.es>
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).-->
+
+<odoo>
+<!-- 	ESTE -->
+	<record model="ir.ui.menu" id="account.menu_finance">
+<!-- 		AQUÍ DENTRO -->
+  		<field name="parent_id" eval="ref('account_accountant.menu_accounting')"></field>
+  		<field name="sequence" eval="21"/>
+	</record>
+</odoo>
