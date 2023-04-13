@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Xavier Piernas <xavier.piernas@qubiq.es>
+     Copyright 2020 Valentin Vinagre <valentin.vinagre@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+    	<xpath expr="//span[@t-field='o.fiscal_position_id.note']/.." position="after">
+            <t t-if="o.payment_mode_id and o.payment_mode_id.account_source != 'no' and o.bank_accounts_report()">
+                <p t-if="o.payment_mode_id.report_text">
+                    <span t-field="o.payment_mode_id.report_text"/>
+                </p>
+                <t t-if="len(o.bank_accounts_report()) == 1">
+        			<strong>Bank Account:</strong>
+                </t>
+                <t t-if="len(o.bank_accounts_report()) > 1">
+                    <strong>Bank Accounts:</strong>
+                    <br/>
+                </t>
+                <t t-foreach="o.bank_accounts_report()" t-as="account_bank">
+                    <t t-if="o.payment_mode_id.show_part_bank_account == 'full'">
+                        <span t-field="account_bank.acc_number"/>
+                    </t>
+                    <t t-elif="o.payment_mode_id.show_part_bank_account == 'first'">
+                        <span t-esc="account_bank.acc_number[:o.payment_mode_id.show_part_bank_account_chars] + '*' * (len(account_bank.acc_number) - o.payment_mode_id.show_part_bank_account_chars)"/>
+                    </t>
+                    <t t-elif="o.payment_mode_id.show_part_bank_account == 'last'">
+                        <span t-esc="'*' * (len(account_bank.acc_number) - o.payment_mode_id.show_part_bank_account_chars) + account_bank.acc_number[-o.payment_mode_id.show_part_bank_account_chars:]"/>
+                    </t>
+                    <t t-if="account_bank.bank_id.bic">
+                        (<span t-field="account_bank.bank_id.bic"/>)
+                    </t>
+                    <br/>
+                </t>
+                <t t-if="o.payment_mode_id.show_payment_message_invoice and o.residual != 0.00 and o.state == 'open'">
+                    <span t-field="o.payment_mode_id.payment_message"/><strong> <span t-field="o.name"/></strong>
+                </t>
+    		</t>
+    	</xpath>
+    </template>
+</odoo>
