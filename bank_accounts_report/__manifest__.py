@@ -5,7 +5,7 @@
 {
     "name": "Bank Accounts Report",
     "summary": "Choose which bank accounts will be displayed on invoice and sale order reports",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Account",
     "website": "https://www.qubiq.es",
     "author": "QubiQ, Odoo Community Association (OCA)",
