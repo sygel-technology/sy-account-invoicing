@@ -7,6 +7,6 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
-[](/) | 16.0.1.0.0 | 
+[bank_accounts_report](bank_accounts_report/) | 16.0.1.0.1 | Choose which bank accounts will be displayed in sale & invoice reports
 
 [//]: # (end addons)
