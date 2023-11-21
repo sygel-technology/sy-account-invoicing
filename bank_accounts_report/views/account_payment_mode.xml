@@ -14,7 +14,7 @@
                     <field name="report_text" attrs="{'invisible': [('account_source', '=', 'no')]}"/>
                     <field name="partner_account_source" widget="radio" attrs="{'invisible': [('account_source', '!=', 'partner')]}"/>
         			<field name="invoice_account" attrs="{'invisible': [('account_source', '!=', 'company')]}"/>
-        			<field name="res_partner_bank_ids" attrs="{'invisible': ['|', ('account_source', '!=', 'company'), ('invoice_account', '=', True)]}" widget="many2many_tags" domain="[('company_id', '=', company_id)]"/>
+                    <field name="res_partner_bank_ids" attrs="{'invisible': ['|', ('account_source', '!=', 'company'), ('invoice_account', '=', True)]}" widget="many2many_tags" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>
                     <field name="apply_sale_order" attrs="{'invisible': [('account_source', '=', 'no')]}"/>
                     <field name="show_part_bank_account" attrs="{'invisible': [('account_source', '=', 'no')]}"/>
                     <field name="show_part_bank_account_chars" attrs="{'invisible': ['|',('show_part_bank_account', '=', 'full'), ('account_source', '=', 'no')]}"/>
