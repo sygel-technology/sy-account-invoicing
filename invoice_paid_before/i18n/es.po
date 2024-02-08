@@ -1,0 +1,45 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* invoice_paid_before
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-26 12:38+0000\n"
+"PO-Revision-Date: 2024-01-26 13:38+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: invoice_paid_before
+#: model:ir.model.fields,field_description:invoice_paid_before.field_account_move__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: invoice_paid_before
+#: model:ir.model.fields,field_description:invoice_paid_before.field_account_move__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: invoice_paid_before
+#: model:ir.model,name:invoice_paid_before.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: invoice_paid_before
+#: model:ir.model.fields,field_description:invoice_paid_before.field_account_move____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: invoice_paid_before
+#: model:ir.model.fields,field_description:invoice_paid_before.field_account_bank_statement_line__invoice_paid_before
+#: model:ir.model.fields,field_description:invoice_paid_before.field_account_move__invoice_paid_before
+#: model:ir.model.fields,field_description:invoice_paid_before.field_account_payment__invoice_paid_before
+msgid "Paid Before"
+msgstr "Pagado previamente"
