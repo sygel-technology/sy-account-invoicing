@@ -6,7 +6,8 @@
 Bank Accounts Report
 ====================
 
-Choose which bank accounts will be displayed and payment message on invoice and sale order reports.
+Choose which bank accounts will be displayed and payment message on invoice and sale
+order reports.
 
 
 Installation
@@ -18,16 +19,47 @@ Just install.
 Configuration
 =============
 
-Go to Accounting -> Configuration -> Payment Modes and configure the "Bank Account on Reports" section for every payment mode. "Account Source" is "No" by default, which means no account will be displayed on reports. By choosing "Company" and "Use Invoice Account" it will display the account set on the invoice. Unchecking "Use Invoice Account", you can manually set as many accounts from your company as you want to appear on the invoice. By choosing  "Partner", it will take the partner account from the mandate on the invoice if it is required. Additionally, choose "Mandate" or "Bank Account", so if the mandate is not required, it will look for the account on the last active mandate for the partner or on its last bank account. Choose "Apply to Sale Orders" if you want it to work for sale orders too.
+1. **Access Payment Modes**
+   To configure the payment modes that will influence how bank accounts and payment messages are displayed:
 
-If you want a payment message to be displayed on Sales Orders and/or Invoices. Check the 'Show Payment Message in Invoices' and/or 'Show Payment Message in Sales' checkbox and complete the 'Payment Message' field.
-Invoices or Sales Orders will show 'Payment Message' + Invoice/Sales name.
+   - Navigate to ``Accounting > Configuration > Payment Modes``.
 
+2. **Configure Each Payment Mode**
+   For each payment mode, adjust the following options according to your needs on Bank Account on Reports section:
+
+   - **Account Source:** 
+   
+     - Choose **Company** to display bank accounts associated with the company on reports.
+     - Choose **Partner** to display bank accounts from the partner based on mandates or direct bank accounts.
+       
+       - If **Company** is selected, you can opt to **Use Invoice Account**, which will display the account set on the invoice. If this option is unchecked, you can manually select multiple accounts from your company to appear.
+       
+       - If **Partner** is selected, decide whether the account will be taken from an existing mandate or simply from the last active bank account of the partner.
+   - **Apply to Sale Orders:** Check this option if you want the settings to apply to sales orders as well.
+   - **Report Text:** Enter a custom message that will appear on sales and invoice reports.
+   - **Payment Message:** If you want a payment message displayed on invoices or sales orders, check the 'Show Payment Message in Invoices' and/or 'Show Payment Message in Sales' checkbox and complete the 'Payment Message' field. Invoices or Sales Orders will show 'Payment Message' + Invoice/Sales name.
+
+3. **Visibility of the Bank Account Number**
+   Configure how you would like bank account numbers to be displayed on reports:
+   
+   - **How Show Bank Account:**
+   
+     - **Full:** The entire bank account number is displayed.
+     
+     - **First n chars:** Only the first specified number of characters of the bank account number will be shown, with the rest being masked.
+     
+     - **Last n chars:** Only the last specified number of characters of the bank account number will be shown, with the beginning of the number being masked.
 
 Usage
 =====
 
-Make an invoice or a sale report and choose a payment mode that has been previously configured. The correspondent accounts will be displayed at the end of the report.
+**Creating Invoices or Sales Orders**
+Once the payment modes are configured, you can proceed to create invoices or sales orders that use these payment modes.
+
+**Verification in Reports**
+
+- **Create an Invoice/Sales Order:** Ensure to select the previously configured payment mode.
+- **Review the Generated Report:** When generating the report for the invoice or sales order, check the end of the document to see the bank accounts listed as per your configuration. Additionally, any configured payment message should appear as set.
 
 
 Bug Tracker
@@ -54,8 +86,8 @@ Contributors
 ~~~~~~~~~~~~
 
 * Xavier Piernas <xavier.piernas@qubiq.es>
-* Valentín Vinagre <valentin.vinagre@qubiq.es>
 * Valentín Vinagre <valentin.vinagre@sygel.es>
+* Manuel Regidor <manuel.regidor@sygel.es>
 
 
 Maintainer

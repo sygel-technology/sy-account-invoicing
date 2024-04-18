@@ -9,6 +9,7 @@ class AccountMove(models.Model):
     _inherit = 'account.move'
 
     def bank_accounts_report(self):
+        self.ensure_one()
         bank_accounts = []
         if self.payment_mode_id:
             if self.payment_mode_id.account_source == 'company':

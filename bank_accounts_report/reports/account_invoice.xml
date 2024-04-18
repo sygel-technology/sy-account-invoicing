@@ -4,7 +4,7 @@
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
     <template id="report_invoice_document" inherit_id="account.report_invoice_document">
-    	<xpath expr="//span[@t-field='o.fiscal_position_id.note']/.." position="after">
+    	<xpath expr="//span[@t-field='o.narration']/.." position="before">
 
             <t t-if="o.payment_mode_id and o.payment_mode_id.account_source != 'no' and o.bank_accounts_report()">
                 <p t-if="o.payment_mode_id.report_text">

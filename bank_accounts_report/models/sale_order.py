@@ -9,11 +9,11 @@ class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
     def bank_accounts_report(self):
+        self.ensure_one()
         bank_accounts = []
         if self.payment_mode_id and self.payment_mode_id.apply_sale_order:
             if self.payment_mode_id.account_source == 'company':
                 if not self.payment_mode_id.invoice_account and\
-                        self.payment_mode_id.apply_sale_order and\
                         self.payment_mode_id.res_partner_bank_ids:
                     for account in self.payment_mode_id.res_partner_bank_ids:
                         bank_accounts.append(account)
