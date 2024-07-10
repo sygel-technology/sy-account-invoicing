@@ -7,7 +7,7 @@
     "summary": "Choose which bank accounts will be displayed on invoice and sale order reports",
     "version": "17.0.1.0.0",
     "category": "Account",
-    "website": "https://www.qubiq.es",
+    "website": "https://github.com/sygel-technology/sy-account-invoicing",
     "author": "QubiQ, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
@@ -17,11 +17,11 @@
         "account_payment_mode",
         "account_payment_sale",
         "account_banking_mandate",
-        "sale"
+        "sale",
     ],
     "data": [
         "views/account_payment_mode.xml",
         "reports/account_invoice.xml",
-        "reports/sale_order.xml"
+        "reports/sale_order.xml",
     ],
 }
