@@ -5,7 +5,7 @@
 {
     "name": "Bank Accounts Report",
     "summary": "Choose which bank accounts will be displayed on invoice and sale order reports",
-    "version": "16.0.1.0.1",
+    "version": "16.0.1.0.2",
     "category": "Account",
     "website": "https://github.com/sygel-technology/sy-account-invoicing",
     "author": "QubiQ, Odoo Community Association (OCA)",
