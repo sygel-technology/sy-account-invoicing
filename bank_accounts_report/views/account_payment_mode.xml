@@ -8,16 +8,19 @@
         <field name="model">account.payment.mode</field>
         <field name="inherit_id" ref="account_payment_mode.account_payment_mode_form" />
         <field name="arch" type="xml">
-        	<xpath expr="//group[1]" position="after">
-        		<group name="bank_accounts" string="Bank Accounts on Reports">
-        			<field name="account_source" />
+            <xpath expr="//group[1]" position="after">
+                <group name="bank_accounts" string="Bank Accounts on Reports">
+                    <field name="account_source" />
                     <field name="report_text" invisible="account_source == 'no'" />
                     <field
                         name="partner_account_source"
                         widget="radio"
                         invisible="account_source != 'partner'"
                     />
-        			<field name="invoice_account" invisible="account_source != 'company'" />
+                    <field
+                        name="invoice_account"
+                        invisible="account_source != 'company'"
+                    />
                     <field
                         name="res_partner_bank_ids"
                         invisible="account_source != 'company' or invoice_account"
@@ -46,8 +49,8 @@
                         invisible="account_source == 'no'"
                         required="show_payment_message_sale or show_payment_message_invoice"
                     />
-        		</group>
-        	</xpath>
+                </group>
+            </xpath>
         </field>
     </record>
 </odoo>

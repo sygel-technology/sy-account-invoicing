@@ -4,8 +4,7 @@
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
     <template id="report_invoice_document" inherit_id="account.report_invoice_document">
-    	<xpath expr="//span[@t-field='o.narration']/.." position="before">
-
+        <xpath expr="//span[@t-field='o.narration']/.." position="before">
             <t
                 t-if="o.payment_mode_id and o.payment_mode_id.account_source != 'no' and o.bank_accounts_report()"
             >
@@ -13,13 +12,13 @@
                     <span t-field="o.payment_mode_id.report_text" />
                 </p>
                 <t t-if="len(o.bank_accounts_report()) == 1">
-        			<strong>Bank Account:</strong>
+                    <strong>Bank Account:</strong>
                 </t>
                 <t t-if="len(o.bank_accounts_report()) > 1">
                     <strong>Bank Accounts:</strong>
                     <br />
                 </t>
-    			<t t-foreach="o.bank_accounts_report()" t-as="account_bank">
+                <t t-foreach="o.bank_accounts_report()" t-as="account_bank">
                     <t t-if="o.payment_mode_id.show_part_bank_account == 'full'">
                         <span t-field="account_bank.acc_number" />
                     </t>
@@ -41,11 +40,12 @@
                 <t
                     t-if="o.payment_mode_id.show_payment_message_invoice and o.amount_residual != 0.00 and o.state == 'posted'"
                 >
-                    <span t-field="o.payment_mode_id.payment_message" /><strong> <span
-                            t-field="o.name"
-                        /></strong>
+                    <span t-field="o.payment_mode_id.payment_message" />
+                    <strong>
+                        <span t-field="o.name" />
+                    </strong>
                 </t>
-    		</t>
-    	</xpath>
+            </t>
+        </xpath>
     </template>
 </odoo>
