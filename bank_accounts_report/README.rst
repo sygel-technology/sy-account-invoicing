@@ -33,6 +33,7 @@ Configuration
      - Choose **Partner** to display bank accounts from the partner based on mandates or direct bank accounts.
        
        - If **Company** is selected, you can opt to **Use Invoice Account**, which will display the account set on the invoice. If this option is unchecked, you can manually select multiple accounts from your company to appear.
+         If both options are left empty (no invoice account and no manually selected accounts), no bank account or payment message will appear on the report, to avoid displaying empty or incorrect information.
        
        - If **Partner** is selected, decide whether the account will be taken from an existing mandate or simply from the last active bank account of the partner.
    - **Apply to Sale Orders:** Check this option if you want the settings to apply to sales orders as well.
