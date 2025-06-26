@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 Xavier Piernas <xavier.piernas@qubiq.es>
+     Copyright 2020 Valentin Vinagre <valentin.vinagre@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="account_payment_mode_form" model="ir.ui.view">
+        <field name="name">account.payment.mode.form</field>
+        <field name="model">account.payment.mode</field>
+        <field name="inherit_id" ref="account_payment_mode.account_payment_mode_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[1]" position="after">
+                <group name="bank_accounts" string="Bank Accounts on Reports">
+                    <field name="account_source" />
+                    <field name="report_text" invisible="account_source == 'no'" />
+                    <field
+                        name="partner_account_source"
+                        widget="radio"
+                        invisible="account_source != 'partner'"
+                    />
+                    <field
+                        name="invoice_account"
+                        invisible="account_source != 'company'"
+                    />
+                    <field
+                        name="res_partner_bank_ids"
+                        invisible="account_source != 'company' or invoice_account"
+                        widget="many2many_tags"
+                        domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"
+                    />
+                    <field name="apply_sale_order" invisible="account_source == 'no'" />
+                    <field
+                        name="show_part_bank_account"
+                        invisible="account_source == 'no'"
+                    />
+                    <field
+                        name="show_part_bank_account_chars"
+                        invisible="show_part_bank_account == 'full' or account_source == 'no'"
+                    />
+                    <field
+                        name="show_payment_message_sale"
+                        invisible="account_source == 'no'"
+                    />
+                    <field
+                        name="show_payment_message_invoice"
+                        invisible="account_source == 'no'"
+                    />
+                    <field
+                        name="payment_message"
+                        invisible="account_source == 'no'"
+                        required="show_payment_message_sale or show_payment_message_invoice"
+                    />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
