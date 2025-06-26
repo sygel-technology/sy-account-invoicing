@@ -16,6 +16,13 @@ Odoo account and invoicing Addons
 <!-- prettier-ignore-start -->
 
 [//]: # (addons)
+
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[bank_accounts_report](bank_accounts_report/) | 18.0.1.0.0 |  | Choose which bank accounts will be displayed on invoice and sale order reports
+
 [//]: # (end addons)
 
 <!-- prettier-ignore-end -->
