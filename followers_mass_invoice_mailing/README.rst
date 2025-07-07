@@ -1,6 +1,6 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
-	:target: http://www.gnu.org/licenses/agpl
-	:alt: License: AGPL-3
+    :target: http://www.gnu.org/licenses/agpl
+    :alt: License: AGPL-3
 
 =================================
 Followers in mass invoice mailing
@@ -34,12 +34,6 @@ To use this module, you need to:
 3. Select the invoices you want to send to the recipients and their followers.
 4. From action select send&print.
 5. Click on send.
-
-
-ROADMAP
-=======
-
-* ...
 
 
 Bug Tracker

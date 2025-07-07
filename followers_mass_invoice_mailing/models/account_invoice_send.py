@@ -11,7 +11,7 @@ class AccountInvoiceSend(models.TransientModel):
         if self.is_email:
             ctx = self._context
             if len(ctx.get("active_ids")) == 1:
-                super()._send_email()
+                return super()._send_email()
             else:
                 for active_id in ctx.get("active_ids"):
                     invoice = self.env["account.move"].browse([active_id])
@@ -44,7 +44,7 @@ class AccountInvoiceSend(models.TransientModel):
                     }
                     wizard = (
                         self.env["account.invoice.send"]
-                        .with_context(new_ctx)
+                        .with_context(**new_ctx)
                         .create(values)
                     )
                     wizard._compute_composition_mode()
