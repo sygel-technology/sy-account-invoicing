@@ -1,6 +1,6 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
-	:target: http://www.gnu.org/licenses/agpl
-	:alt: License: AGPL-3
+    :target: http://www.gnu.org/licenses/agpl
+    :alt: License: AGPL-3
 
 ===========================
 Invoice Line Display Number
@@ -35,16 +35,6 @@ To use this module, you need to:
 #. If the limit set in the technical parameters is 0, all the lines will be shown.
 
 
-ROADMAP
-=======
-
-[ Enumerate known caveats and future potential improvements.
-  It is mostly intended for end-users, and can also help
-  potential new contributors discovering new features to implement. ]
-
-* ...
-
-
 Bug Tracker
 ===========
 
@@ -76,8 +66,6 @@ Maintainer
 
 This module is maintained by Sygel.
 
-Maintainer
-~~~~~~~~~~
 
 This module is maintained by Sygel.
 

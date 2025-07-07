@@ -15,7 +15,7 @@ odoo.define(
                     this.modelParams.modelName === "account.move" &&
                     this.fieldsView.name === "account.move.form"
                 ) {
-                    const limit = rpc
+                    const limit = rpc // eslint-disable-line no-unused-vars
                         .query({
                             model: "ir.config_parameter",
                             method: "get_param",
@@ -23,7 +23,7 @@ odoo.define(
                         })
                         .then((res) => {
                             if (!_.isUndefined(res)) {
-                                attrs.limit = parseInt(res);
+                                attrs.limit = parseInt(res, 10);
                             }
                         });
                 }
