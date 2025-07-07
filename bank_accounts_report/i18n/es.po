@@ -40,7 +40,7 @@ msgstr ""
 #: code:addons/bank_accounts_report/models/account_payment_mode.py:0
 #: model:ir.model.fields,field_description:bank_accounts_report.field_account_payment_mode__account_source
 #, python-format
-msgid "Account Source"
+msgid "Account Source "
 msgstr "Origen cuenta"
 
 #. module: bank_accounts_report
@@ -126,12 +126,12 @@ msgstr "Cliente"
 #: code:addons/bank_accounts_report/models/account_payment_mode.py:0
 #: model:ir.model.fields,field_description:bank_accounts_report.field_account_payment_mode__partner_account_source
 #, python-format
-msgid "Partner Account Source"
+msgid "Partner Account Source "
 msgstr "Origen Cuenta del cliente."
 
 #. module: bank_accounts_report
 #: model:ir.model.fields,field_description:bank_accounts_report.field_account_payment_mode__payment_message
-msgid "Payment Message"
+msgid "Payment Message "
 msgstr "Mensaje de Cobro"
 
 #. module: bank_accounts_report

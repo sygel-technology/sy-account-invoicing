@@ -8,9 +8,9 @@
         <field name="model">account.payment.mode</field>
         <field name="inherit_id" ref="account_payment_mode.account_payment_mode_form" />
         <field name="arch" type="xml">
-        	<xpath expr="//group[1]" position="after">
-        		<group name="bank_accounts" string="Bank Accounts on Reports">
-        			<field name="account_source" />
+            <xpath expr="//group[1]" position="after">
+                <group name="bank_accounts" string="Bank Accounts on Reports">
+                    <field name="account_source" />
                     <field
                         name="report_text"
                         attrs="{'invisible': [('account_source', '=', 'no')]}"
@@ -20,11 +20,11 @@
                         widget="radio"
                         attrs="{'invisible': [('account_source', '!=', 'partner')]}"
                     />
-        			<field
+                    <field
                         name="invoice_account"
                         attrs="{'invisible': [('account_source', '!=', 'company')]}"
                     />
-        			<field
+                    <field
                         name="res_partner_bank_ids"
                         attrs="{'invisible': ['|', ('account_source', '!=', 'company'), ('invoice_account', '=', True)]}"
                         widget="many2many_tags"
@@ -54,8 +54,8 @@
                         name="payment_message"
                         attrs="{'invisible': [('account_source', '=', 'no')], 'required': ['|', ('show_payment_message_sale', '=', True), ('show_payment_message_invoice', '=', True)]}"
                     />
-        		</group>
-        	</xpath>
+                </group>
+            </xpath>
         </field>
     </record>
 </odoo>
