@@ -39,7 +39,7 @@ To use this module, you need to:
 ROADMAP
 =======
 
-* ...
+* Migration to v18 is not needed because this feature has been included by default.
 
 
 Bug Tracker
