@@ -2,14 +2,14 @@
 # Copyright 2020-2022 Valentin Vinagre <valentin.vinagre@sygel.es>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo import _, fields, models
+from odoo import fields, models
 
 
 class AccountPaymentMode(models.Model):
     _inherit = "account.payment.mode"
 
     account_source = fields.Selection(
-        [("company", _("Company")), ("partner", _("Partner")), ("no", _("No"))],
+        [("company", "Company"), ("partner", "Partner"), ("no", "No")],
         default="no",
     )
     report_text = fields.Char(
@@ -26,7 +26,7 @@ class AccountPaymentMode(models.Model):
         comodel_name="res.partner.bank", string="Bank Accounts"
     )
     partner_account_source = fields.Selection(
-        [("mandate", _("Mandate")), ("bank", _("Bank Account"))],
+        [("mandate", "Mandate"), ("bank", "Bank Account")],
         default="bank",
     )
     apply_sale_order = fields.Boolean(default=False, string="Apply to Sale Orders")
