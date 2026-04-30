@@ -21,7 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[bank_accounts_report](bank_accounts_report/) | 18.0.1.0.0 |  | Choose which bank accounts will be displayed on invoice and sale order reports
+[bank_accounts_report](bank_accounts_report/) | 18.0.1.0.1 |  | Choose which bank accounts will be displayed on invoice and sale order reports
 
 [//]: # (end addons)
 
