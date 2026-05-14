@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Alberto Martínez <alberto.martinez@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+        <xpath
+            expr="//td[@name='account_invoice_line_name']/span"
+            position="attributes"
+        >
+            <attribute name="t-field" />
+            <attribute
+                name="t-out"
+            >line.name.replace('[{}]'.format(line.product_id.default_code), '')</attribute>
+        </xpath>
+    </template>
+</odoo>
