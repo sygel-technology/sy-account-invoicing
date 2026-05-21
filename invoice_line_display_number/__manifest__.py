@@ -7,7 +7,7 @@
     "version": "15.0.1.0.0",
     "category": "Invoicing",
     "website": "https://github.com/sygel-technology/sy-account-invoicing",
-    "author": "Sygel, Odoo Community Association (OCA)",
+    "author": "Sygel",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
