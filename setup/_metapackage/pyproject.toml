@@ -1,9 +1,10 @@
 [project]
 name = "odoo-addons-sygel-technology-sy-account-invoicing"
-version = "18.0.20260529.0"
+version = "18.0.20260612.0"
 dependencies = [
     "odoo-addon-bank_accounts_report==18.0.*",
     "odoo-addon-invoice_line_display_number==18.0.*",
+    "odoo-addon-invoice_line_label_without_internal_ref==18.0.*",
 ]
 classifiers=[
     "Programming Language :: Python",

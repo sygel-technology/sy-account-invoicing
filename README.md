@@ -23,6 +23,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [bank_accounts_report](bank_accounts_report/) | 18.0.1.0.1 |  | Choose which bank accounts will be displayed on invoice and sale order reports
 [invoice_line_display_number](invoice_line_display_number/) | 18.0.1.0.0 |  | Configure number of invoice lines to be shown
+[invoice_line_label_without_internal_ref](invoice_line_label_without_internal_ref/) | 18.0.1.0.0 |  | Invoice Line Label Without Internal Reference
 
 [//]: # (end addons)
 
